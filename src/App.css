@@ -1,0 +1,267 @@
+/* Reseteo básico */
+* 
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Consolas', 'Monaco', 'Lucida Console', monospace;
+}
+
+/* Colores estilo VS Code*/
+:root 
+{
+  --bg-explorer: #1e1e1e;
+  --bg-editor: #2a2a2d;
+  --bg-tabs: #1e1e1e;
+  --text-primary: #cccccc;
+  --accent-color: #007acc;
+}
+
+body 
+{
+  background-color: var(--bg-editor);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.vscode-layout 
+{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header 
+{
+  display: flex;
+  align-items: center;
+  gap : 8px;
+  padding: 5px 15px;
+  background-color: var(--bg-tabs);
+  border-bottom: 1px solid #444;
+  font-size: 0.9rem;
+}
+
+.vscode-body 
+{
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Estilos del explorador */
+.activity-bar
+{
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  background-color: var(--bg-explorer);
+}
+
+.activity-bar-icons
+{
+  list-style: none;
+  width: 100%;
+}
+
+.activity-bar li
+{
+  padding: 12px 0;
+  text-align: center;
+  color: #858585;
+  border-left: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.activity-bar li svg
+{
+  font-size: 1.5rem;
+}
+
+.activity-bar li:hover
+{
+  color: #fff;
+  cursor: pointer;
+}
+
+.activity-bar li.active
+{
+  color: #fff;
+  border-left: 2px solid #007acc;
+}
+
+.explorer 
+{
+  width: 300px;
+  height: 100vh;
+  background-color: var(--bg-explorer);
+  padding: 0px;
+  border-right: 1px solid #444;
+  border-left: 1px solid #444;
+}
+
+.explorer h3 
+{
+  font-size: 0.9rem;
+  padding: 10px 10px 0px;
+  color: #888;
+}
+
+.explorer h4
+{
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 10px 10px 0px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.explorer ul
+{
+  list-style: none;
+}
+
+.explorer-icon 
+{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  padding-left: 20px;
+}
+
+.explorer-icon:hover 
+{
+  background-color: #2a2a2d;
+}
+
+.explorer-icon.active 
+{
+  background-color: #37373d;
+  width: 100%;
+  color: #fff;
+}
+
+.file-explorer-icon 
+{
+  font-size: 1.1rem;
+  margin-right: 8px;
+  display: flex;
+}
+
+/* Estilos del área de contenido y pestañas */
+.editor 
+{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-editor);
+}
+
+.tabs-header 
+{
+  background-color: var(--bg-tabs);
+  display: flex;
+}
+
+.tabs-header button 
+{
+  background: none;
+  border: none;
+  border-right: 1px solid #444;
+  color: var(--text-primary);
+  padding: 8px 15px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tabs-header button:hover 
+{
+  background-color: #27272b;
+}
+
+.tabs-header button.active-tab 
+{
+  background-color: var(--bg-editor);
+  color: #fff;
+  opacity: 1;
+  border-top: 1px solid #007acc;;
+}
+
+.tab-button 
+{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tab-button .close-tab 
+{
+  opacity: 0; 
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.tab-button.active-tab .close-tab 
+{
+  opacity: 1;
+}
+
+.tab-button:hover .close-tab 
+{
+  opacity: 1;
+}
+
+.tab-button .close-tab:hover 
+{
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+} 
+
+.file-content 
+{
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.file-tab-icon
+{
+  font-size: 1.1rem;
+  display: flex;
+}
+
+.tags span 
+{
+    background-color: #3e3e42;
+    padding: 2px 6px;
+    margin-right: 5px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.var-keyword
+{
+  color: #569CD6; /* Azul para 'const' */
+}
+
+.var-name
+{
+  color: #9CDCFE; /* Azul claro para el nombre de la variable */
+}
+
+.var-value
+{
+  color: #ecc207; /* Naranja para el valor de la variable */
+}
