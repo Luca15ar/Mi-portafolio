@@ -1,9 +1,11 @@
+import styles from '../modules/ReadMe.module.css';
+
 export function ReadMe()
 {
     return (
-        <div className="readme-container">
-            <h2 className="readme-title"># ¡Bienvenid@ a mi portafolio!</h2>
-            <p className="readme-description">Desde el explorador de archivos puedes elegir que ver.</p>
+        <div className={styles.readMeContainer}>
+            <h2 className={styles.readMeTitle}># ¡Bienvenid@ a mi portafolio!</h2>
+            <p className={styles.readMeDescription}>Desde el explorador de archivos podés elegir que ver.</p>
         </div>
     )
 }

@@ -1,0 +1,97 @@
+.inicioContainer 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.miPerfil 
+{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #1e1e1e; 
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.perfilImg 
+{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #569cd6; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bloqueCodigo 
+{
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* -- Colores de variables -- */
+.varKeyword { color: #569cd6; } 
+.varName { color: #9cdcfe; }    
+.varValue { color: #ecc207; }   
+.stringValue { color: #ce9178; } 
+.indent 
+{ 
+    margin-left: 20px; 
+    display: inline-block; 
+}
+
+.miDescripcion 
+{
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e; 
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.miDescripcion h2 
+{
+  font-size: 1.7rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.enlaces 
+{
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.linkBtn 
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.linkBtn:hover 
+{
+  background-color: #3a3d41;
+  border-color: #007acc;
+}
+
+/* Colores para los iconos en los botones */
+.githubIcon { font-size: 1.3rem; }
+.linkedinIcon { font-size: 1.3rem; color: #0a66c2; }

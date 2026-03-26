@@ -1,0 +1,18 @@
+.readMeContainer
+{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.readMeTitle
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #569cd6;
+}
+
+.readMeDescription
+{
+    font-size: 16px;
+}
