@@ -115,11 +115,15 @@ header
 
 .explorer h4
 {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
   font-size: 0.8rem;
   font-weight: bold;
-  padding: 10px 10px 0px;
+  padding: 10px 8px 0px;
   color: #fff;
   margin-bottom: 10px;
+  gap: 0.3rem;
 }
 
 .explorer ul

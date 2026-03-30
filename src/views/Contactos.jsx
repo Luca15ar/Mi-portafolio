@@ -1,8 +1,22 @@
+import styles from '../modules/Contacto.module.css';
+
 export function Contactos()
 {
     return (
-        <div className="contactos-container">
-            <h2>Contactos</h2>
+        <div className={styles.contactoContainer}>
+            <p>
+                <span className={styles.varKeyword1}>const </span>
+                <span className={styles.varKeyword2}>function </span>
+                <span className={styles.varName}>EnviarCorreo </span>
+                <span className={styles.varValue}>() </span>
+                <span className={styles.varValue}>{"{"}</span><br/>
+            </p>
+            <div className={styles.contactoCardContainer}>
+
+            </div>
+            <p>
+                <span className={styles.varValue}>{"}"}</span>
+            </p>
         </div>
     )
 }
