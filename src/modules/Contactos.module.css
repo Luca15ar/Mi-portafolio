@@ -1,0 +1,141 @@
+/* -- Colores de las variables -- */
+.varKeyword1 { color: #C586C0; } 
+.varKeyword2 { color: #C85046; }
+.varKeyword3 { color: #569cd6; } 
+.varName1 { color: #ac78dc; }    
+.varName2 { color: #9cdcfe; }    
+.varValue { color: #ecc207; }   
+.stringValue { color: #ce9178; } 
+
+/* -- Contenedor principal -- */
+.contactoContainer
+{
+    width: 100%;
+    padding: 20px;
+}
+
+.contactoContainer p
+{
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contactoCardContainer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 15px 0 15px 0;
+}
+
+.contactoCard
+{
+    background-color: #1e1e1e; 
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* -- Estilos del input y textarea -- */
+.inputContacto,
+textarea
+{
+    background-color: #2d2d2d;
+    color: #ccc;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.inputContacto:focus,
+textarea:focus
+{
+    outline: none;
+    border-color: #007acc;
+}
+
+/* -- Estilos del botón -- */
+.enviarBtn
+{
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.enviarBtn:hover:not(:disabled)
+{
+    background-color: #9cdcfe;
+    color: #1e1e1e;
+}
+
+/* -- Estilos de los links -- */
+.contactosList
+{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.linkBtn 
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.linkBtn:hover 
+{
+  background-color: #3a3d41;
+  border-color: #007acc;
+}
+
+.copiarBtn 
+{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* padding: 10px 20px; */
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #444;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  width: 58px;
+  height: 38px;
+}
+
+.copiarBtn:hover 
+{
+  background-color: #3a3d41;
+  border-color: #007acc;
+  cursor: pointer;
+}
+
+.checkIcon 
+{
+  color: #4CAF50; /* Verde para indicar éxito */
+  font-size: bold;
+}
