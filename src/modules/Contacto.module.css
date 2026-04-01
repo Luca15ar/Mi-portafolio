@@ -12,6 +12,14 @@
     padding: 20px;
 }
 
+.contactoContainer p
+{
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 .contactoCardContainer
 {
     display: flex;

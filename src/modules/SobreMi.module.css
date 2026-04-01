@@ -11,6 +11,14 @@
     width: 100%;
 }
 
+.sobreMiContainer p
+{
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
 .sobreMiCardContainer
 {
     display: flex;

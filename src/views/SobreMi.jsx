@@ -29,9 +29,6 @@ export function SobreMi()
                                 Nivel 2 Digital Skills - Digital House
                             </h3>
                         </li>
-                        <li>
-                            <h3>Desarrollo web Full-stack</h3>
-                        </li>
                     </ul>
                 </div>
                 <div className={styles.experienciaLaboral + ' ' + styles.sobreMiCard}>
@@ -48,13 +45,13 @@ export function SobreMi()
                 </div>
                 <div className={styles.intereses + ' ' + styles.sobreMiCard}>
                     <h2>Intereses</h2>
-                    <h3>Frontend, frameworks, desarrollo web, backend, APIs y aprendizaje continuo</h3>
+                    <h3>Frontend, frameworks, desarrollo web, backend, APIs y aprendizaje continuo.</h3>
                 </div>
                 <div className={styles.miCv + ' ' + styles.sobreMiCard}>
                     <p>
                         Si querés saber más sobre mi formación y experiencia, podés descargar mi CV haciendo clic.
                     </p>
-                    <a className={styles.cvLink} href={miCV} download>
+                    <a className={styles.cvLink} href={miCV} download="CV - Luca Areco 2026.pdf">
                         <FaDownload /> Descargar
                     </a>
                 </div>

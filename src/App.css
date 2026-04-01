@@ -41,6 +41,7 @@ header
   background-color: var(--bg-tabs);
   border-bottom: 1px solid #444;
   font-size: 0.9rem;
+  cursor: default;
 }
 
 .vscode-body 
@@ -87,7 +88,6 @@ header
 .activity-bar li:hover
 {
   color: #fff;
-  cursor: pointer;
 }
 
 .activity-bar li.active
@@ -111,12 +111,12 @@ header
   font-size: 0.9rem;
   padding: 10px 10px 0px;
   color: #888;
+  cursor: default;
 }
 
 .explorer h4
 {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   font-size: 0.8rem;
   font-weight: bold;
@@ -124,6 +124,7 @@ header
   color: #fff;
   margin-bottom: 10px;
   gap: 0.3rem;
+  cursor: default;
 }
 
 .explorer ul
