@@ -29,8 +29,118 @@
 
 .proyectosCard
 {
+    display: flex;
     background-color: #1e1e1e; 
     padding: 25px;
     border-radius: 8px;
     border: 1px solid #333;
+    gap: 15px;
+}
+
+/* -- Contenedor de la imagen del proyecto -- */
+.imagenContainer
+{
+    flex: 0 0 250px;
+    height: auto;
+    border: 1px solid #333;
+}
+
+.proyectoImagen
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* -- Contenedor de la información del proyecto -- */
+.informacionContainer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.informacionContainer h3
+{
+    margin: 0;
+    font-size: 1.5rem;
+    color: #569cd6;
+}
+
+/* -- Contenedor de las tecnologías utilizadas en cada proyecto -- */
+.tecnologiasContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.tecnologiasContainer ul
+{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+}
+
+.tecnologiaCard
+{
+    background-color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: default;
+}
+
+/* -- Contenedor de los enlaces a GitHub y al proyecto en vivo -- */
+.linksContainer
+{
+    display: flex;
+    gap: 20px;
+}
+
+.linkRepositorio
+{
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    border-radius: 4px;
+    color: #1e1e1e;
+    padding: 10px 15px;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkRepositorio:hover
+{
+    background-color: #7ce480;
+    color: #1e1e1e;
+}
+
+.linkDemo
+{
+    display: flex;
+    align-items: center;
+    background-color: #569cd6;
+    border-radius: 4px;
+    color: #1e1e1e;
+    padding: 10px 15px;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkDemo:hover
+{
+    background-color: #9cdcfe;
+    color: #1e1e1e;
 }
