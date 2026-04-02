@@ -6,14 +6,13 @@ import { FaLinkedin } from "react-icons/fa";
 export function Contactos()
 {
     const form = useRef();
-    const [setEstadoEnvio] = useState('');
+    const [estadoEnvio, setEstadoEnvio] = useState('');
     const [cargando, setCargando] = useState(false);
 
     const enviarCorreo = async (e) =>
     {
         e.preventDefault();
         setCargando(true);
-        setEstadoEnvio('Enviando...');
 
         const formData = {
             user_name: form.current.user_name.value,
@@ -105,11 +104,13 @@ export function Contactos()
                         <span className={styles.varName2}>mensaje </span>
                         = 
                         </h3>
-                    <textarea name="message" required-rows="5" required></textarea>
+                    <textarea name="message" rows="5" required></textarea>
 
                     <button className={styles.enviarBtn} type="submit" disabled={cargando}>
-                        Enviar
+                        {cargando ? 'Enviando...' : 'Enviar'}
                     </button>
+
+                    {estadoEnvio && <p>{estadoEnvio}</p>}
                 </form>
             </div>
             <div className={styles.contactoCardContainer}>
