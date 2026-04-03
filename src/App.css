@@ -296,3 +296,66 @@ header
 
   
 }
+
+/* -- ADAPTACIÓN PARA MÓVILES -- */
+.header-left 
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-menu-btn 
+{
+  display: none; /* Por defecto se oculta en PC y Tablet */
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.mobile-menu-btn:hover 
+{
+  color: #fff;
+}
+
+.vscode-body 
+{
+  position: relative;
+}
+
+@media (max-width: 768px) 
+{
+  .activity-bar 
+  {
+    display: none; 
+  }
+
+  .mobile-menu-btn 
+  {
+    display: block; 
+  }
+
+  .explorer 
+  {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80%; 
+    max-width: 300px;
+    height: 100%;
+    z-index: 100;
+    transition: left 0.3s ease; 
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5); 
+  }
+
+  .explorer.open 
+  {
+    left: 0;
+  }
+
+  .tabs-header button 
+  {
+    padding: 10px;
+  }
+}

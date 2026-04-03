@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { filesData } from './data/filesData'
-import { VscSearch, VscCode, VscFiles, VscChevronDown} from "react-icons/vsc";
+import { VscSearch, VscCode, VscFiles, VscChevronDown, VscMenu} from "react-icons/vsc";
 import { ReadMe } from './views/ReadMe'
 import { Inicio } from './views/Inicio'
 import { SobreMi } from './views/SobreMi'
@@ -22,6 +22,8 @@ function App()
     }
 
     setActiveTab(nombreArchivo);    
+
+    setMenuAbierto(false);
   }
 
   const cerrarPestaña = (e, nombreArchivo) =>
@@ -66,10 +68,18 @@ function App()
     }
   }
 
+  /* -- Estado para controlar el menú móvil -- */
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
   return (
     <div className="vscode-layout">
       {/* Cabecera */}
-      <header><VscCode className="var-keyword"></VscCode> Portafolio Luca Areco</header>
+      <header>
+        <div className="header-left">
+          <VscMenu className="mobile-menu-btn" onClick={() => setMenuAbierto(!menuAbierto)} />
+          <VscCode className="var-keyword"></VscCode> Portafolio Luca Areco
+        </div>
+      </header>
 
       {/* Cuerpo principal de la interfaz */}
       <div className="vscode-body">
@@ -90,13 +100,12 @@ function App()
         </aside>
 
         {/* EXPLORADOR DE ARCHIVOS */}
-        <aside className="explorer">
+        <aside className={`explorer ${menuAbierto ? "open" : ""}`}>
           <h3>EXPLORADOR</h3>
           <h4><VscChevronDown></VscChevronDown> MI-PORTAFOLIO</h4>
           <ul>
             {filesData.map((file) => {
               const Icono = file.icon;
-
               return (
                 <li 
                   key={file.id} 
