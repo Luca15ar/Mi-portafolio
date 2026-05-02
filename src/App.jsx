@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react';
 import { filesData } from './data/filesData'
 import { VscSearch, VscCode, VscFiles, VscChevronDown, VscMenu} from "react-icons/vsc";
 import { ReadMe } from './views/ReadMe'
@@ -71,12 +71,42 @@ function App()
   /* -- Estado para controlar el menú móvil -- */
   const [menuAbierto, setMenuAbierto] = useState(false);
 
+  const sidebarRef = useRef(null);
+  const menuButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuAbierto && 
+        sidebarRef.current && 
+        !sidebarRef.current.contains(event.target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
+        setMenuAbierto(false); 
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [menuAbierto]);
+
   return (
     <div className="vscode-layout">
       {/* Cabecera */}
       <header>
         <div className="header-left">
-          <VscMenu className="mobile-menu-btn" onClick={() => setMenuAbierto(!menuAbierto)} />
+          {/* 1. AÑADE LA REF AQUÍ AL ÍCONO DEL MENÚ */}
+          <VscMenu 
+            ref={menuButtonRef}
+            className="mobile-menu-btn" 
+            onClick={() => setMenuAbierto(!menuAbierto)} 
+          />
           <VscCode className="var-keyword"></VscCode> Portafolio Luca Areco
         </div>
       </header>
@@ -100,7 +130,7 @@ function App()
         </aside>
 
         {/* EXPLORADOR DE ARCHIVOS */}
-        <aside className={`explorer ${menuAbierto ? "open" : ""}`}>
+        <aside ref={sidebarRef} className={`explorer ${menuAbierto ? "open" : ""}`}>
           <h3>EXPLORADOR</h3>
           <h4><VscChevronDown></VscChevronDown> MI-PORTAFOLIO</h4>
           <ul>
